@@ -1,4 +1,4 @@
-# script-scrapper
+#xscript-scrapper
 find keywords in all game scripts
 
 the best tool to patch anti cheats
@@ -16,4 +16,4 @@ how to use
 [+] fix copy path
 [+] simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
 [+] apply game to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
-[-] add progress bar
+[ ] add progress bar
