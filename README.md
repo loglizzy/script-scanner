@@ -11,9 +11,9 @@ how to use
 *. Progress can be see in the console (F9)
 
 # todo
-[x] run in threads synchronously
-[x] stop button (may look ez but itsnt such)
-[x] fix copy path
-[x] simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
-[x] apply game to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
-[ ] add progress bar
+[+] run in threads synchronously
+[+] stop button (may look ez but itsnt such)
+[+] fix copy path
+[+] simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
+[+] apply game to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
+[-] add progress bar
