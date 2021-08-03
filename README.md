@@ -12,8 +12,9 @@ how to use
 
 # todo
 - [x] run in threads synchronously
-- [x] stop button (may look ez but itsnt such)
+- [x] fix stop button
 - [x] fix copy path
+- [x] cant edit threads amount while scanning
 - [x] simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
 - [x] apply game to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
 - [ ] add progress bar
