@@ -38,6 +38,7 @@ Frame.Position = UDim2.new(0, 387, 0, 136)
 Frame.Size = UDim2.new(0, 356, 0, 403)
 Frame.Selectable = true
 Frame.Active = true
+Frame.ZIndex = 99
 
 Resulsts.Name = "Resulsts"
 Resulsts.Parent = Frame
@@ -255,9 +256,10 @@ a.MouseButton1Click:Connect(function()
     if not max then print('select threads amount before starting') return end
     if a.Text == 'Stop' then a.Text = 'Start' return end
     a.Text = 'Stop'
-    Threads.TextEditable = false
-    Threads.Selectable = false
-    Threads.Active = false
+    Threads.TextEditable = a.Text ~= 'Stop'
+    Threads.Selectable = a.Text ~= 'Stop'
+    Threads.Active = a.Text ~= 'Stop'
+    Threads.ClearTextOnFocus = a.Text ~= 'Stop'
     
     for i,f in pairs(q:GetChildren()) do
 		if f:IsA('TextButton') then
@@ -276,15 +278,15 @@ a.MouseButton1Click:Connect(function()
 			    if v:IsA('LocalScript') or v:IsA('ModuleScript') then
 			        print(v)
 				    amt = amt + 1
-				    local e = decompile(v)
+				    local e = decompile(v):lower()
 				    for i,f in pairs(s:GetChildren()) do
-				    	if f:IsA('TextButton') and e:find(f.Name) then
+				    	if f:IsA('TextButton') and e:find(f.Name:lower()) then
 				    	    local n = string.gsub('  '..v:GetFullName(),plr.Name,'LocalPlayer')
 				    		local c = p:Clone()
 				    		c.Text = string.gsub(n,'game.','')
 				    		c.Parent = q
 				    		c.MouseButton1Click:Connect(function()
-				    		    (setclipboard or print)('game.'..n:sub(2,#n))
+				    		    (setclipboard or print)('game.'..n:sub(3,#n))
 				    		end)
 				    		break
 				    	end
@@ -321,6 +323,7 @@ a.MouseButton1Click:Connect(function()
 	c.Parent = s
 	
 	c.MouseButton1Click:Connect(function()
+	    if Stop.Text == 'Stop' then return end
     	c:Remove()
     end)
 end)
