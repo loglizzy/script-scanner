@@ -256,6 +256,8 @@ a.MouseButton1Click:Connect(function()
     if a.Text == 'Stop' then a.Text = 'Start' return end
     a.Text = 'Stop'
     Threads.TextEditable = false
+    Threads.Selectable = false
+    Threads.Active = false
     
     for i,f in pairs(q:GetChildren()) do
 		if f:IsA('TextButton') then
@@ -264,6 +266,7 @@ a.MouseButton1Click:Connect(function()
     end
     
 	local amt = 0
+	local max = max
 	local tbl = (getscripts() or game:GetDescendants())
 
 	for i,v in pairs(tbl) do
@@ -281,7 +284,7 @@ a.MouseButton1Click:Connect(function()
 				    		c.Text = string.gsub(n,'game.','')
 				    		c.Parent = q
 				    		c.MouseButton1Click:Connect(function()
-				    		    (setclipboard or print)(n)
+				    		    (setclipboard or print)('game.'..n:sub(2,#n))
 				    		end)
 				    		break
 				    	end
@@ -309,10 +312,11 @@ local p = sample_2
 
 a.MouseButton1Click:Connect(function()
 	local e = t.Text
+	if t == '' then return end
 	t.Text = ''
 
 	local c = p:Clone()
-	c.Text = '  '..e
+	c.Text = '  "'..e..'"'
 	c.Name = e
 	c.Parent = s
 	
