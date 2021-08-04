@@ -1,7 +1,5 @@
-# script-scrapper
-Find keywords in all game scripts
-
-The best tool to patch anti cheats
+# script-scanner
+devs secured the remotes? No problems, use that boi and find the source of any shit
 
 # how to use
 1. Add some keywords (example: 'magnitude', 'Kick', 'Health')
@@ -18,4 +16,5 @@ The best tool to patch anti cheats
 - [x] cant remove/add keywords while scanning
 - [x] simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
 - [x] apply game to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
+- [x] dont scan duplicated scripts, using data cost check 
 - [ ] add progress bar
