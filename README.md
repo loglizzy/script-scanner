@@ -17,4 +17,5 @@ devs secured the remotes? No problems, use that boi and find the source of any s
 - [x] simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
 - [x] apply game to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
 - [x] ignore duplicated scripts, using data cost check
-- [x] add progress bar
+- [x] add progress bar & counter
+- [ ] probly change the progress bar position, to the "Results" label right side
