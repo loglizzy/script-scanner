@@ -65,14 +65,14 @@ UIListLayout.Parent = Resulsts
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0, 1)
 
-Start.Name = "Start"
+Start.Name = "Scan"
 Start.Parent = Frame
 Start.BackgroundColor3 = Color3.fromRGB(41, 74, 122)
 Start.BorderColor3 = Color3.fromRGB(218, 218, 218)
 Start.Position = UDim2.new(0, 280, 0, 372)
 Start.Size = UDim2.new(0, 65, 0, 21)
 Start.Font = Enum.Font.Gotham
-Start.Text = "Start"
+Start.Text = "Scan"
 Start.TextColor3 = Color3.fromRGB(227, 227, 227)
 Start.TextSize = 12.000
 
@@ -305,13 +305,13 @@ end)
 
 a.MouseButton1Click:Connect(function()
     if not max then print('select threads amount before starting') return end
-    if a.Text == 'Stop' then a.Text = 'Start' end
+    if a.Text == 'Stop' then a.Text = 'Scan' end
     a.Text = 'Stop'
     Threads.TextEditable = a.Text ~= 'Stop'
     Threads.Selectable = a.Text ~= 'Stop'
     Threads.Active = a.Text ~= 'Stop'
     Threads.ClearTextOnFocus = a.Text ~= 'Stop'
-    if a.Text == 'Start' then return end
+    if a.Text == 'Scan' then return end
     
     Frame:TweenSize(OPEN_SIZE,DIRECTION,STYLE,TIME)
     
@@ -336,7 +336,7 @@ a.MouseButton1Click:Connect(function()
 	end
 
 	for i,v in pairs(tbl) do
-	    if a.Text == 'Start' then return end
+	    if a.Text == 'Scan' then return end
 		spawn(function()
 			pcall(function()
 				amt,amtd = amt + 1, amtd + 1
@@ -361,14 +361,14 @@ a.MouseButton1Click:Connect(function()
 
         local max = ((max <= #tbl and max) or #tbl)
 		if amt >= max then
-			while amt ~= 0 and a.Text == 'Start' do wait() end
+			while amt ~= 0 and a.Text == 'Scan' do wait() end
 		end
 		
 		Bar:TweenSize(UDim2.new(amtd/#tbl, 0, 0, 11),DIRECTION,STYLE,TIME)
 		wait()
 	end
 	
-	a.Text = 'Start'
+	a.Text = 'Scan'
 	Threads.TextEditable = true
     Threads.Selectable = true
     Threads.Active = true
