@@ -6,7 +6,7 @@ My best creation, i use it all time to get game source.
 2. Select the threads amount (how many scripts gonna be checked by once, i recommend using 15)
 3. Start then the results gonna show up in the "Results" section, you can click on them to copy to the clipboard
 
-*. Progress can be see in the console (F9)
+*. Progress can be see even in the progress bar/counter, and in the own console (F9)
 
 # todo
 - [x] Run in threads synchronously.
