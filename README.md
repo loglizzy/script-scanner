@@ -1,5 +1,5 @@
 # script-scanner
-devs secured the remotes? No problems, use that boi and find the source of any shit
+My best creation, i use it all time to get game source.
 
 # how to use
 1. Add some keywords (example: 'magnitude', 'Kick', 'Health')
