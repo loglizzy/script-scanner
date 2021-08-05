@@ -16,6 +16,6 @@ devs secured the remotes? No problems, use that boi and find the source of any s
 - [x] cant remove/add keywords while scanning
 - [x] simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
 - [x] apply game to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
-- [x] ignore duplicated scripts, using data cost check
+- [x] ignore duplicated scripts, using data cost check (huge improvement)
 - [x] add progress bar & counter
 - [ ] probly change the progress bar position, to the "Results" label right side
