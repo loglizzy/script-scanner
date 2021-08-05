@@ -9,13 +9,13 @@ devs secured the remotes? No problems, use that boi and find the source of any s
 *. Progress can be see in the console (F9)
 
 # todo
-- [x] run in threads synchronously
-- [x] fix stop button
-- [x] fix copy path
-- [x] cant edit threads amount while scanning
-- [x] cant remove/add keywords while scanning
-- [x] simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
-- [x] apply game to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
-- [x] ignore duplicated scripts, using data cost check (huge improvement)
-- [x] add progress bar & counter
-- [ ] probly change the progress bar position, to the "Results" label right side
+- [x] Run in threads synchronously
+- [x] Fix stop button
+- [x] Fix copy path
+- [x] Cant edit threads amount while scanning
+- [x] Cant remove/add keywords while scanning
+- [x] Simplify path in results (game.Workspace.randomshit -> Workspace.randomshit)
+- [x] Apply "game" to copy path (Players.LocalPlayer -> game.Players.LocalPlayer)
+- [x] Ignore duplicated scripts, using data cost check (huge improvement)
+- [x] Add progress bar & counter
+- [ ] Probly change the progress bar position, to the "Results" label right side
