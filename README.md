@@ -18,6 +18,5 @@ My best creation, i use it all time to get game source.
 - [x] Apply "game" to copy path (Players.LocalPlayer -> game.Players.LocalPlayer).
 - [x] Ignore duplicated scripts, using data cost check (huge improvement).
 - [x] Add progress bar & counter.
-- [ ] Probly change the progress bar position, to the "Results" label right side.
 - [ ] Add case sensitive toggle.
 - [ ] Add keyword filter type ("and" <- Checks if the script has all the keywords, "or" <- Checks if the script has at least one of the keywords).
