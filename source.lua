@@ -330,7 +330,7 @@ a.MouseButton1Click:Connect(function()
 	        if bl[v.DataCost] then
 	            tbl.remove(tbl,i)
 	        else
-	            bl[v.DataCost] = v
+	            bl[v.DataCost] = true
 	        end
 	    end)
 	end
