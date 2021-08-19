@@ -50,6 +50,7 @@ Frame.Position = UDim2.new(0, 381, 0, 89)
 Frame.Selectable = true
 Frame.Size = UDim2.new(0, 356, 0, 403)
 Frame.ClipsDescendants = true
+Frame.ZIndex = 2
 
 Resulsts.Name = "Resulsts"
 Resulsts.Parent = Frame
@@ -327,8 +328,8 @@ a.MouseButton1Click:Connect(function()
 	local bl = {}
 	for i,v in pairs(tbl) do
 	    pcall(function()
-	        if bl[v.DataCost] then
-	            tbl.remove(tbl,i)
+	        if bl[v.DataCost] or not (v:IsA('LocalScript') or v:IsA('ModuleScript')) then
+	            table.remove(tbl,i)
 	        else
 	            bl[v.DataCost] = true
 	        end
