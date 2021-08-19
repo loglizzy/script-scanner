@@ -1,5 +1,5 @@
 # script-scanner
-My best creation, i use it all time to get game source.
+My best creation, i use it all time to understand and patch anti exploits.
 
 # how to use
 1. Add some keywords (example: 'magnitude', 'Kick', '')
