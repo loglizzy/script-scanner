@@ -2,9 +2,9 @@
 My best creation, i use it all time to understand and patch anti exploits.
 
 # how to use
-1. Add some keywords (example: 'magnitude', 'Kick', '')
-2. Select the threads amount (how many scripts gonna be checked by once, i recommend using 15)
-3. Start then the results gonna show up in the "Results" section, you can click on them to copy to the clipboard
+1. Add some keywords (like: 'magnitude', 'Kick')
+2. Select the threads amount (how many scripts gonna be checked by once, i recommend using 10)
+3. Start, and the results gonna show up in the "Results" section, you can click on them to copy to the clipboard
 
 *. Progress can be see even in the progress bar/counter, and in the own console (F9)
 
