@@ -304,6 +304,21 @@ Threads:GetPropertyChangedSignal('Text'):Connect(function()
     max = tonumber(Threads.Text)
 end)
 
+local function gettb()
+    local a = getscripts() or game:GetDescendants()
+    for i,v in pairs(a) do
+        if not (v:IsA'LocalScript' or v:IsA'ModuleScript') then
+            table.remove(a,i)
+        end
+    end
+    
+    table.sort(a,function(e,v)
+        return e.DataCost > v.DataCost
+    end)
+    
+    return a
+end
+
 a.MouseButton1Click:Connect(function()
     if not max then print('select threads amount before starting') return end
     if a.Text == 'Stop' then a.Text = 'Scan' end
@@ -322,26 +337,16 @@ a.MouseButton1Click:Connect(function()
 		end
     end
     
-	local amt,amtd = 0,0
-	local max = max
-	local tbl = (getscripts() or game:GetDescendants())
-	local bl = {}
-	for i,v in pairs(tbl) do
-	    pcall(function()
-	        if bl[v.DataCost] or not (v:IsA('LocalScript') or v:IsA('ModuleScript')) then
-	            table.remove(tbl,i)
-	        else
-	            bl[v.DataCost] = true
-	        end
-	    end)
-	end
+	local amt,amtd,max = 0,0,max
+	local tbl = gettb()
 
 	for i,v in pairs(tbl) do
-	    if a.Text == 'Scan' then return end
+	    if not v then continue end
+	    if a.Text == 'Scan' then break end
+	    
 		spawn(function()
 			pcall(function()
 				amt,amtd = amt + 1, amtd + 1
-				bl[v.DataCost] = v
 				local e = decompile(v):lower()
 				for i,f in pairs(s:GetChildren()) do
 					if f:IsA('TextButton') and e:find(f.Name:lower()) then
@@ -362,10 +367,10 @@ a.MouseButton1Click:Connect(function()
 
         local max = ((max <= #tbl and max) or #tbl)
 		if amt >= max then
-			while amt ~= 0 and a.Text == 'Scan' do wait() end
+			while amt ~= 0 and a.Text == 'Stop' do wait() end
 		end
 		
-		Bar:TweenSize(UDim2.new(amtd/#tbl, 0, 0, 11),DIRECTION,STYLE,TIME)
+		Bar.Size = UDim2.new(amtd/#tbl, 0, 0, 11)
 		wait()
 	end
 	
