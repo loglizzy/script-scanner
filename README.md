@@ -1,5 +1,6 @@
 # script-scanner
 My best creation, i use it all time to understand and patch anti exploits.
+* creation fully fixed, now it should work perfectly
 
 # how to use
 1. Add some keywords (like: 'magnitude', 'Kick')
